@@ -2,29 +2,30 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 interface ProjectsProps {
   onNavigate?: (page: number) => void;
 }
 
 const videoWorks = [
-  { title: "南昌治愈日记", type: "微电影", video: "/works/微电影《南昌治愈日记》.mp4" },
-  { title: "我的想象力都去哪了", type: "微电影", video: "/works/微电影《我的想象力都去哪了》.mp4" },
-  { title: "少年的你", type: "电影解析", video: "/works/电影解析《少年的你》.mp4" },
-  { title: "活动报道", type: "新闻报道", video: "/works/活动报道类新闻.mp4" },
+  { title: "南昌治愈日记", type: "微电影", video: getAssetPath("/works/微电影《南昌治愈日记》.mp4") },
+  { title: "我的想象力都去哪了", type: "微电影", video: getAssetPath("/works/微电影《我的想象力都去哪了》.mp4") },
+  { title: "少年的你", type: "电影解析", video: getAssetPath("/works/电影解析《少年的你》.mp4") },
+  { title: "活动报道", type: "新闻报道", video: getAssetPath("/works/活动报道类新闻.mp4") },
 ];
 
 const mediaWorks = [
-  { title: "热点小视频", video: "/experiments/新媒体运营_社会新闻短视频.mp4" },
-  { title: "热点小视频", video: "/experiments/新媒体运营_社会新闻短视频2.mp4" },
-  { title: "热点小视频", video: "/experiments/新媒体运营_社会新闻短视频3.mp4" },
+  { title: "热点小视频", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频.mp4") },
+  { title: "热点小视频", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频2.mp4") },
+  { title: "热点小视频", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频3.mp4") },
 ];
 
 const mediaImages = [
-  "/experiments/图片1.png",
-  "/experiments/图片2.png",
-  "/experiments/图片3.png",
-  "/experiments/图片4.png",
+  getAssetPath("/experiments/图片1.png"),
+  getAssetPath("/experiments/图片2.png"),
+  getAssetPath("/experiments/图片3.png"),
+  getAssetPath("/experiments/图片4.png"),
 ];
 
 export default function Projects({ onNavigate }: ProjectsProps) {

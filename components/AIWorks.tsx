@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 interface AIWorksProps {
   onNavigate?: (page: number) => void;
@@ -8,17 +9,17 @@ interface AIWorksProps {
 
 const aiWorks = [
   // 第一行
-  { title: "AI创意产品展示", video: "/experiments/AI_创意产品展示.mp4" },
-  { title: "AI创意产品展示 2", video: "/experiments/AI_创意产品展示2.mp4" },
-  { title: "AI创意产品展示 3", video: "/experiments/AI_创意产品展示3.mp4" },
+  { title: "AI创意产品展示", video: getAssetPath("/experiments/AI_创意产品展示.mp4") },
+  { title: "AI创意产品展示 2", video: getAssetPath("/experiments/AI_创意产品展示2.mp4") },
+  { title: "AI创意产品展示 3", video: getAssetPath("/experiments/AI_创意产品展示3.mp4") },
   // 第二行
-  { title: "AI OOTD展示", video: "/experiments/AI_ootd展示.mp4" },
-  { title: "AI颜值展示", video: "/experiments/AI_颜值展示1.mp4" },
-  { title: "AI颜值展示 2", video: "/experiments/AI_颜值展示2.mp4" },
+  { title: "AI OOTD展示", video: getAssetPath("/experiments/AI_ootd展示.mp4") },
+  { title: "AI颜值展示", video: getAssetPath("/experiments/AI_颜值展示1.mp4") },
+  { title: "AI颜值展示 2", video: getAssetPath("/experiments/AI_颜值展示2.mp4") },
   // 第三行
-  { title: "AI家具类产品短视频", video: "/experiments/AI_家具类产品短视频.mp4" },
-  { title: "AI营养类产品短视频", video: "/experiments/AI_营养类产品短视频.mp4" },
-  { title: "AI数字人", video: "/experiments/AI_数字人.mp4" },
+  { title: "AI家具类产品短视频", video: getAssetPath("/experiments/AI_家具类产品短视频.mp4") },
+  { title: "AI营养类产品短视频", video: getAssetPath("/experiments/AI_营养类产品短视频.mp4") },
+  { title: "AI数字人", video: getAssetPath("/experiments/AI_数字人.mp4") },
 ];
 
 export default function AIWorks({ onNavigate }: AIWorksProps) {

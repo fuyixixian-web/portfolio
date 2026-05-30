@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 interface HomeProps {
   onNavigate?: (page: number) => void;
@@ -67,7 +68,7 @@ export default function Home({ onNavigate }: HomeProps) {
         className="absolute left-24 top-48 w-[300px] z-20 bg-white p-2 shadow-2xl"
         style={{ transform: 'rotate(-2deg)' }}
       >
-        <Image src="/photos/21.jpg" alt="胡宇萱" width={350} height={440} className="w-full object-cover" />
+        <Image src={getAssetPath("/photos/21.jpg")} alt="胡宇萱" width={350} height={440} className="w-full object-cover" />
       </motion.div>
 
       {/* 自我介绍文字 - 语言框样式 */}
@@ -107,7 +108,7 @@ export default function Home({ onNavigate }: HomeProps) {
         className="absolute left-[490px] top-[210px] w-[280px] z-20 shadow-2xl"
         style={{ transform: 'rotate(2deg)' }}
       >
-        <Image src="/photos/10.jpg" alt="胡宇萱" width={350} height={440} className="w-full object-cover" />
+        <Image src={getAssetPath("/photos/10.jpg")} alt="胡宇萱" width={350} height={440} className="w-full object-cover" />
       </motion.div>
 
       {/* ABOUT ME 圆形卡片 - 右下角缩小 */}

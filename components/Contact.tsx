@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/utils";
 
 export default function Contact() {
   return (
@@ -80,7 +81,7 @@ export default function Contact() {
           }}
           className="absolute left-[100px] top-[20px] w-[350px] z-20"
         >
-          <Image src="/photos/4.png" alt="胡宇萱" width={350} height={450} className="w-full object-contain" />
+          <Image src={getAssetPath("/photos/4.png")} alt="胡宇萱" width={350} height={450} className="w-full object-contain" />
         </motion.div>
 
         {/* 右侧晃动照片 */}
@@ -103,7 +104,7 @@ export default function Contact() {
           }}
           className="absolute right-[100px] w-[300px] z-20"
         >
-          <Image src="/photos/12-transparent.png" alt="胡宇萱" width={300} height={400} className="w-full object-contain" />
+          <Image src={getAssetPath("/photos/12-transparent.png")} alt="胡宇萱" width={300} height={400} className="w-full object-contain" />
         </motion.div>
       </div>
     </section>
