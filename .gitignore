@@ -24,3 +24,7 @@ yarn-error.log*
 # OS
 .DS_Store
 Thumbs.db
+
+# video compression backups
+*.original.bak.mp4
+*.compressed.mp4
