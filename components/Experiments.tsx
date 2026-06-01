@@ -2,25 +2,26 @@
 
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { getAssetPath } from "@/lib/utils";
 
 const aiWorks = [
-  { title: "AI电商短视频", video: "/experiments/AI_电商短视频.mp4" },
-  { title: "AI数字人", video: "/experiments/AI_数字人.mp4" },
-  { title: "AI颜值展示", video: "/experiments/AI_颜值展示1.mp4" },
-  { title: "AI OOTD", video: "/experiments/AI_ootd展示.mp4" },
+  { title: "AI电商短视频", video: getAssetPath("/experiments/AI_电商短视频.mp4") },
+  { title: "AI数字人", video: getAssetPath("/experiments/AI_数字人.mp4") },
+  { title: "AI颜值展示", video: getAssetPath("/experiments/AI_颜值展示1.mp4") },
+  { title: "AI OOTD", video: getAssetPath("/experiments/AI_ootd展示.mp4") },
 ];
 
 const mediaWorks = [
-  { title: "社会新闻短视频", video: "/experiments/新媒体运营_社会新闻短视频.mp4" },
-  { title: "社会新闻短视频 2", video: "/experiments/新媒体运营_社会新闻短视频2.mp4" },
-  { title: "社会新闻短视频 3", video: "/experiments/新媒体运营_社会新闻短视频3.mp4" },
+  { title: "社会新闻短视频", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频.mp4") },
+  { title: "社会新闻短视频 2", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频2.mp4") },
+  { title: "社会新闻短视频 3", video: getAssetPath("/experiments/新媒体运营_社会新闻短视频3.mp4") },
 ];
 
 const mediaImages = [
-  "/experiments/图片1.png",
-  "/experiments/图片2.png",
-  "/experiments/图片3.png",
-  "/experiments/图片4.png",
+  getAssetPath("/experiments/图片1.png"),
+  getAssetPath("/experiments/图片2.png"),
+  getAssetPath("/experiments/图片3.png"),
+  getAssetPath("/experiments/图片4.png"),
 ];
 
 export default function Experiments() {
